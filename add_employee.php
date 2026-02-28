@@ -15,13 +15,9 @@ Phone:
 Email:
 <input type="text" name="email"><br>
 
-<input type="submit" value="Save">
-
-
 Photo:
 <input type="file" name="photo"><br>
 
-<input type="submit" value="Save">
 Address:
 <input type="text" name="address"><br>
 
@@ -31,5 +27,5 @@ Emergency Contact:
 Company Address:
 <input type="text" name="company_address"><br>
 
-
+<input type="submit" value="Save">
 </form>

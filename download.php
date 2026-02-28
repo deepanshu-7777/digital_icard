@@ -39,8 +39,8 @@ $pdf->Cell(100,10,$row['employeeid'],0,1);
  $pdf->Cell(50,10,"Name:");
 $pdf->Cell(100,10,$row['name'],0,1);
 
-// $pdf->Cell(50,10,"Department:");
-// $pdf->Cell(100,10,$row['department'],0,1);
+$pdf->Cell(50,10,"Department:");
+$pdf->Cell(100,10,$row['department'],0,1);
 
 // $pdf->Cell(50,10,"Phone:");
 // $pdf->Cell(100,10,$row['phone'],0,1);
@@ -57,6 +57,9 @@ $pdf->Cell(100,10,$row['name'],0,1);
 /* QR Code */
 
 $pdf->Image($row['qr'],150,80,40);
+
+// $pdf->Cell(50,10,"company address:");
+// $pdf->Cell(100,10,$row['company_address'],0,1);
 
 $pdf->Output("D",$row['employeeid']."_card.pdf");
 
