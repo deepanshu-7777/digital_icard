@@ -1,0 +1,207 @@
+body{
+font-family: Arial, sans-serif;
+background:linear-gradient(to right,#4facfe,#00f2fe);
+margin:0;
+padding:0;
+}
+
+.login-box{
+
+width:350px;
+margin:120px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 15px #ccc;
+
+text-align:center;
+
+}
+
+h2{
+margin-bottom:20px;
+}
+
+input{
+
+width:90%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
+
+}
+
+button{
+
+background:#007BFF;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#0056b3;
+
+}
+/* Dashboard Styling */
+
+.container{
+width:98%;
+margin:auto;
+}
+.navbar{
+
+background:#007BFF;
+padding:15px;
+color:white;
+border-radius:8px;
+margin-bottom:20px;
+
+}
+
+.navbar a{
+
+color:white;
+margin-right:20px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+.navbar a:hover{
+
+text-decoration:underline;
+
+}
+
+/* Search Box */
+
+.search-box{
+
+margin-bottom:20px;
+
+}
+table{
+font-size:14px;
+}
+
+.search-box input{
+
+width:250px;
+padding:8px;
+
+}
+
+.search-box button{
+
+padding:8px 15px;
+
+}
+
+/* Table Design */
+
+table{
+
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0px 0px 10px #ccc;
+
+}
+
+th{
+
+background:#007BFF;
+color:white;
+padding:10px;
+
+}
+
+td{
+
+padding:10px;
+text-align:center;
+border-bottom:1px solid #ddd;
+
+}
+
+tr:hover{
+
+background:#f2f2f2;
+
+}
+
+/* Photo */
+
+.photo{
+
+width:50px;
+height:50px;
+border-radius:5px;
+}
+
+/* Buttons */
+
+.btn{
+
+padding:5px 10px;
+border-radius:5px;
+text-decoration:none;
+color:white;
+font-size:14px;
+
+}
+
+.edit{
+
+background:#28a745;
+
+}
+
+.hide{
+
+background:#dc3545;
+
+}
+
+.active{
+
+background:#17a2b8;
+
+}
+
+.download{
+
+background:#007BFF;
+
+}
+
+.action-buttons{
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+
+}
+
+/* Status */
+
+.active-status{
+
+color:green;
+font-weight:bold;
+
+}
+
+.hidden-status{
+
+color:red;
+font-weight:bold;
+
+}
