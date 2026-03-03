@@ -14,21 +14,57 @@ $pdf=new FPDF();
 $pdf->AddPage();
 
 
-/* ========= CONTAINER GAP ========= */
-/* 50px ≈ 15mm */
+/* ========= CONTAINER SETTINGS ========= */
 
-$pad = 15;
+$pad = 10;
 
 $width  = 210 - ($pad*2);
 $height = 297 - ($pad*2);
+
+
+
+/* ========= SHADOW (30px Light Gray) ========= */
+/* 30px ≈ 10mm */
+
+$pdf->SetFillColor( 220,220,220);
+
+/* Outer shadow */
+$pdf->Rect(
+$pad-5,
+$pad-5,
+$width+10,
+$height+10,
+'F'
+);
+
+
+/* Soft shadow layer */
+
+$pdf->SetFillColor(235,235,235);
+
+$pdf->Rect(
+$pad-3,
+$pad-3,
+$width+6,
+$height+6,
+'F'
+);
+
 
 
 /* ========= MAIN CONTAINER ========= */
 
 $pdf->SetFillColor(255,255,255);
 
-$pdf->Rect($pad,$pad,$width,$height,'F');
+/* Border + Fill */
 
+$pdf->Rect(
+$pad,
+$pad,
+$width,
+$height,
+'DF'
+);
 
 
 /* ========= HEADER BLUE ========= */
@@ -190,34 +226,30 @@ $qrBoxY+6,
 );
 
 
+/* ===== WEBSITE BOX (20px TOP MARGIN) ===== */
 
-/* ========= WEBSITE ========= */
+  // 20px ≈ 7mm
+$marginTop = 0; 
 
-$pdf->SetFillColor(255,255,255);
+/* TEXT COLOR WHITE */
 
-$pdf->Rect(
-$pad+($width/2)-45,
-$qrBoxY+103,
-90,
-10,
-'F'
-);
-
-
-$pdf->SetTextColor(0,0,0);
+$pdf->SetTextColor(255,255,255);
 
 $pdf->SetFont("Arial","B",16);
 
 $pdf->SetXY(
 $pad+($width/2)-45,
-$qrBoxY+101
+$qrBoxY+101+$marginTop
 );
 
-$pdf->Cell(90,10,
+$pdf->Cell(
+90,
+10,
 "www.omaxe.com",
-0,1,"C");
-
-
+0,
+1,
+"C"
+);
 
 $pdf->Output("D",$row['employeeid']."_card.pdf");
 
