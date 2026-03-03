@@ -1,4 +1,14 @@
-<form method="POST" action="save_employee.php">
+<?php
+session_start();
+
+if(!isset($_SESSION['admin'])){
+    header("Location:admin_login.php");
+}
+
+include "../backend/db.php";
+?>
+
+<form method="POST" action="../backend/save_employee.php">
 
 Employee ID:
 <input type="text" name="employeeid"><br>

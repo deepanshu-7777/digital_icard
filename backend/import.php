@@ -14,11 +14,11 @@ $department = $data[2];
 $phone = $data[3];
 $email = $data[4];
 
-$qr = "qr/".$employeeid.".png";
+$qr = "../frontend/qr/".$employeeid.".png";
 
 /* Generate QR Code */
 
-$qrdata="http://localhost/employee_card/card.php?id=".$employeeid;
+$qrdata="http://localhost/employee_card/frontend/card.php?id=".$employeeid;
 
 file_put_contents($qr,
 file_get_contents(

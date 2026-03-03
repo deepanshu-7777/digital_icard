@@ -5,7 +5,7 @@ if(!isset($_SESSION['admin'])){
 header("Location:admin_login.php");
 }
 
-include "db.php";
+include "../backend/db.php";
 ?>
 
 <link rel="stylesheet" href="style.css">
@@ -20,7 +20,7 @@ include "db.php";
 
 <a href="upload.php">Upload CSV</a>
 
-<a href="logout.php">Logout</a>
+<a href="../backend/logout.php">Logout</a>
 
 </div>
 
@@ -133,10 +133,10 @@ echo "<td class='action-buttons'>
 href='edit.php?id=".$row['employeeid']."'>Edit</a>
 
 <a class='btn hide'
-href='hide.php?id=".$row['employeeid']."'>Hide</a>
+href='../backend/hide.php?id=".$row['employeeid']."'>Hide</a>
 
 <a class='btn download'
-href='download.php?id=".$row['employeeid']."'>Download</a>
+href='../backend/download.php?id=".$row['employeeid']."'>Download</a>
 
 </td>";
 
@@ -150,10 +150,10 @@ echo "<td class='action-buttons'>
 href='edit.php?id=".$row['employeeid']."'>Edit</a>
 
 <a class='btn active'
-href='active.php?id=".$row['employeeid']."'>Active</a>
+href='../backend/active.php?id=".$row['employeeid']."'>Active</a>
 
 <a class='btn download'
-href='download.php?id=".$row['employeeid']."'>Download</a>
+href='../backend/download.php?id=".$row['employeeid']."'>Download</a>
 
 </td>";
 

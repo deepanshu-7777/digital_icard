@@ -15,7 +15,7 @@ if($row){
 
 $_SESSION['admin']=$username;
 
-header("Location:dashboard.php");
+header("Location:../frontend/dashboard.php");
 
 }
 else{

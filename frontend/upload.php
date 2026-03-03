@@ -8,8 +8,10 @@ header("Location:admin_login.php");
 
 }
 
+include "../backend/db.php";
+
 ?>
-<form method="POST" action="import.php" enctype="multipart/form-data">
+<form method="POST" action="../backend/import.php" enctype="multipart/form-data">
 
 Upload CSV File:
 

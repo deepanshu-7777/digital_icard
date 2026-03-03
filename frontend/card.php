@@ -1,6 +1,6 @@
 <?php
 
-include "db.php";
+include "../backend/db.php";
 
 $id=$_GET['id'];
 
@@ -74,7 +74,7 @@ style="margin-top:10px;">
 
 <br>
 
-<a href="download.php?id=<?php echo $row['employeeid']; ?>">
+<a href="../backend/download.php?id=<?php echo $row['employeeid']; ?>">
 <button>Download Card</button>
 </a>
 

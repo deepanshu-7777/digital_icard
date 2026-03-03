@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+session_start();
+include "../backend/db.php";
+?>
 
 <html>
 
@@ -17,7 +20,7 @@
 <h2>Admin Login</h2>
 <h3>Employee Management System</h3>
 
-<form method="POST" action="admin_check.php">
+<form action="../backend/admin_check.php" method="POST">
 
 <input type="text"
 name="username"

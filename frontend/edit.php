@@ -1,5 +1,5 @@
 <?php
-include "db.php";
+include "../backend/db.php";
 
 $id=$_GET['id'];
 
@@ -9,7 +9,7 @@ WHERE employeeid='$id'");
 $row=mysqli_fetch_assoc($result);
 ?>
 
-<form method="POST" action="update.php" enctype="multipart/form-data">
+<form method="POST" action="../backend/update.php" enctype="multipart/form-data">
 
 <input type="hidden" name="employeeid"
 value="<?php echo $row['employeeid']; ?>">

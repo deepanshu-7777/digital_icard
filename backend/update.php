@@ -54,6 +54,6 @@ WHERE employeeid='$id'";
 
 mysqli_query($conn,$sql);
 
-header("Location:dashboard.php");
+header("Location:../frontend/dashboard.php");
 
 ?>
