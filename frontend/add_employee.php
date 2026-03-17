@@ -3,39 +3,71 @@ session_start();
 
 if(!isset($_SESSION['admin'])){
     header("Location:admin_login.php");
-exit();}
+    exit();
+}
 
 include "../backend/db.php";
 ?>
 
-<form method="POST" action="../backend/save_employee.php">
+<link rel="stylesheet" href="style.css">
 
-Employee ID:
-<input type="text" name="employeeid"><br>
+<div class="edit-page">
 
-Name:
-<input type="text" name="name"><br>
+<div class="edit-card">
 
-Department:
-<input type="text" name="department"><br>
+<h2>Add Employee</h2>
 
-Phone:
-<input type="text" name="phone"><br>
+<form method="POST" action="../backend/save_employee.php" enctype="multipart/form-data">
 
-Email:
-<input type="text" name="email"><br>
+<div class="form-row">
+<label>Employee ID</label>
+<input type="text" name="employeeid" required>
+</div>
 
-Photo:
-<input type="file" name="photo"><br>
+<div class="form-row">
+<label>Name</label>
+<input type="text" name="name" required>
+</div>
 
-Address:
-<input type="text" name="address"><br>
+<div class="form-row">
+<label>Department</label>
+<input type="text" name="department" required>
+</div>
 
-Emergency Contact:
-<input type="text" name="emergency_contact"><br>
+<div class="form-row">
+<label>Phone</label>
+<input type="text" name="phone" required>
+</div>
 
-Company Address:
-<input type="text" name="company_address"><br>
+<div class="form-row">
+<label>Email</label>
+<input type="email" name="email" required>
+</div>
 
-<input type="submit" value="Save">
+<div class="form-row">
+<label>Upload Photo</label>
+<input type="file" name="photo" required>
+</div>
+
+<div class="form-row">
+<label>Address</label>
+<input type="text" name="address">
+</div>
+
+<div class="form-row">
+<label>Emergency Contact</label>
+<input type="text" name="emergency_contact">
+</div>
+
+<div class="form-row">
+<label>Company Address</label>
+<input type="text" name="company_address">
+</div>
+
+<button class="update-btn">Save Employee</button>
+
 </form>
+
+</div>
+
+</div>
