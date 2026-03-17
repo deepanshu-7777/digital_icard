@@ -1,53 +1,72 @@
 <?php
 include "../backend/db.php";
 
-$id=$_GET['id'];
+$id = $_GET['id'];
 
-$result=mysqli_query($conn,"SELECT * FROM employees
-WHERE employeeid='$id'");
-
-$row=mysqli_fetch_assoc($result);
+$result = mysqli_query($conn,"SELECT * FROM employees WHERE employeeid='$id'");
+$row = mysqli_fetch_assoc($result);
 ?>
+<link rel="stylesheet" href="style.css">
+
+<div class="edit-page">
+
+<div class="edit-card">
+
+<h2>Edit Employee</h2>
 
 <form method="POST" action="../backend/update.php" enctype="multipart/form-data">
 
 <input type="hidden" name="employeeid"
 value="<?php echo $row['employeeid']; ?>">
 
-Name:
-<input type="text" name="name"
-value="<?php echo $row['name']; ?>"><br>
+<div class="form-row">
+<label>Name</label>
+<input type="text" name="name" value="<?php echo $row['name']; ?>">
+</div>
 
-Department:
-<input type="text" name="department"
-value="<?php echo $row['department']; ?>"><br>
+<div class="form-row">
+<label>Department</label>
+<input type="text" name="department" value="<?php echo $row['department']; ?>">
+</div>
 
-Phone:
-<input type="text" name="phone"
-value="<?php echo $row['phone']; ?>"><br>
+<div class="form-row">
+<label>Phone</label>
+<input type="text" name="phone" value="<?php echo $row['phone']; ?>">
+</div>
 
-Email:
-<input type="text" name="email"
-value="<?php echo $row['email']; ?>"><br>
+<div class="form-row">
+<label>Email</label>
+<input type="text" name="email" value="<?php echo $row['email']; ?>">
+</div>
 
-Photo:
-<input type="file" name="photo"><br>
+<div class="form-row">
+<label>Upload New Photo</label>
+<input type="file" name="photo">
+</div>
 
-Current Photo:
-<img src="photos/<?php echo $row['photo']; ?>" width="80">
+<div class="photo-box">
+<p>Current Photo</p>
+<img src="photos/<?php echo $row['photo']; ?>">
+</div>
 
-Address:
-<input type="text" name="address"
-value="<?php echo $row['address']; ?>"><br>
+<div class="form-row">
+<label>Address</label>
+<input type="text" name="address" value="<?php echo $row['address']; ?>">
+</div>
 
-Emergency Contact:
-<input type="text" name="emergency_contact"
-value="<?php echo $row['emergency_contact']; ?>"><br>
+<div class="form-row">
+<label>Emergency Contact</label>
+<input type="text" name="emergency_contact" value="<?php echo $row['emergency_contact']; ?>">
+</div>
 
-Company Address:
-<input type="text" name="company_address"
-value="<?php echo $row['company_address']; ?>"><br>
+<div class="form-row">
+<label>Company Address</label>
+<input type="text" name="company_address" value="<?php echo $row['company_address']; ?>">
+</div>
 
-<input type="submit" value="Update">
+<button class="update-btn">Update Employee</button>
 
 </form>
+
+</div>
+</div>
